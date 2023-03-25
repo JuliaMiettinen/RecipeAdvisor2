@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="UTF-8">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <title>RecipeAdvisor - Find recipes with ingredients you have</title>
+        <script type = "text/javascript">
+            function DisplayRecipes() {
+                var txtName = document.getElementById("txtName");
+                var txtOutput = document.getElementById("divOutput");
+                var userIngridients = txtName.value;
+
+                divOutput.innerHTML = "Here are the recipes with a " + userIngridients + ". Enjoy your meal!";
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+        <h1>RecipeAdvisor</h1>
+        <p>A web app that helps you find great recipes with ingredients you have in your fridge</p>
+    </header>
+        <h2>What should we use in our cooking today?</h2>
+        <form action = "">
+            <fieldset>
+                <label>Enter ingridient you have:</label>
+                <input type = "text"
+                id = "txtName" />
+                <button type = "submit"
+                id="search-btn"
+                onclick="DisplayRecipes()">
+            Search for recipes
+            </button>
+            </fieldset>
+        </form>
+
+        <div id = "divOutput">
+
+        </div>
+        <ul id="results-list"></ul>
+        <footer>
+            <p>&copy; 2023 RecipeAdvisor. All rights reserved.</p>
+            <script src="script.js"></script>
+    </body>
+</html>
